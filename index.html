@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         @page {
-            size: DIN-A4; /* Explicitly specifying DIN A4 */
+            size: 210mm 297mm; /* Explicitly specifying DIN A4 dimensions */
             margin: 0;
         }
 
@@ -64,7 +64,7 @@
             left: 0;
             width: 786px;
             height: 700px;
-            background: linear-gradient(90deg, rgba(19, 28, 50, 0.45) 13%, rgba(102, 102, 102, 0) 97.92%);
+            background: linear-gradient(90deg, rgba(19, 28, 50, 0.35) 13%, rgba(102, 102, 102, 0) 97.92%);
             z-index: 1;
             pointer-events: none;
         }
@@ -76,7 +76,7 @@
             left: 0;
             width: 1120px;
             height: 700px;
-            background: linear-gradient(0deg, rgba(31, 42, 68, 0.7) 0%, rgba(21, 21, 21, 0) 181.14%);
+            background: linear-gradient(0deg, rgba(31, 42, 68, 0.525) 0%, rgba(21, 21, 21, 0) 181.14%);
             z-index: 2;
             pointer-events: none;
         }
@@ -119,11 +119,11 @@
             position: absolute;
             width: 418px;
             height: 279px;
-            top: 576px;
+            top: 569px;
             left: 111px;
             border-radius: 10px;
             box-shadow: 0px 0px 4px 0px #1F2A4450;
-            z-index: 2;
+            z-index: 3;
         }
 
         .feature1 img {
@@ -137,11 +137,11 @@
             position: absolute;
             width: 418px;
             height: 278.67px;
-            top: 573px;
+            top: 569px;
             left: 590px;
             border-radius: 10px;
             box-shadow: 0px 0px 4px 0px #1F2A4450;
-            z-index: 2;
+            z-index: 3;
         }
 
         .feature2 img {
@@ -175,25 +175,30 @@
             text-decoration: none;
         }
 
-        .details-section {
+        .section-after-hero {
+            display: none;
+        }
+
+        .details-container {
             position: absolute;
             width: 1120px;
-            height: 400px;
-            top: 901px;
-            z-index: 2;
+            height: 636px; /* Maintain full height of the section */
+            top: 721px; /* Adjust to move down */
+            left: 0;
+            background: #F5F5F5;
+            z-index: 1;
         }
 
         .details-title {
             position: absolute;
-            width: 307px;
+            width: 445px;
             height: 36px;
-            top: 0;
-            left: 65px;
-            font-family: Inter;
+            top: 169px;
+            left: 70px;
             font-size: 28px;
             font-weight: 700;
-            line-height: 32.42px;
-            letter-spacing: 0.01em;
+            line-height: 36px;
+            letter-spacing: -0.03em;
             text-align: left;
             color: #1F2A44;
         }
@@ -202,7 +207,7 @@
             position: absolute;
             width: 970px;
             height: 168px;
-            top: 60px;
+            top: 230px;
             left: 75px;
             display: flex;
             justify-content: space-between;
@@ -211,21 +216,27 @@
         .features-left, .features-right {
             width: 486px;
             height: 166.05px;
+        }
+
+        .features-left ul, .features-right ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .features-left li, .features-right li {
+            position: relative;
+            padding-left: 30px;
             font-family: Inter;
             font-size: 24px;
             font-weight: 400;
             line-height: 32px;
             letter-spacing: -0.03em;
             text-align: left;
-            color: #1F2A44;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
-        }
-
-        .features-left li, .features-right li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 8px;
+            color: #1F2A44;
+            margin-bottom: 10px;
         }
 
         .features-left li::before, .features-right li::before {
@@ -240,28 +251,28 @@
         .description {
             position: absolute;
             width: 990px;
-            height: 159px;
-            top: 280px;
+            height: 139px;
+            top: 460px;
             left: 65px;
+        }
+
+        .description p {
             font-family: Inter;
             font-size: 24px;
             font-weight: 400;
             line-height: 32px;
             text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
             color: #1F2A44;
-            padding-bottom: 20px;
-        }
-
-        .description p {
             margin: 0;
-            padding-bottom: 10px;
         }
 
         .contact-section {
             position: absolute;
             width: 1120px;
             height: 227px;
-            top: 1357px;
+            top: 1357px; /* Adjusted to maintain document flow */
             background: #1F2A44;
             color: white;
             z-index: 2;
@@ -302,7 +313,16 @@
 
         .contact-details a {
             color: white;
-            text-decoration: underline;
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 30.67px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: auto;
         }
 
         ul {
@@ -351,7 +371,9 @@
         Jetzt ihre<br>Besichtigung<br>vereinbaren
     </div>
 
-    <div class="details-section">
+    <div class="section-after-hero"></div>
+
+    <div class="details-container">
         <div class="details-title">Objektdetails</div>
         
         <div class="features-container">
@@ -376,9 +398,7 @@
         </div>
 
         <div class="description">
-            <p>
-                Wir verkaufen insgesamt acht Eigentumswohnungen (3 1/2- und 4 1/2-Zimmer) im Erd-, Ober- und Attikageschoss. Erleben Sie schönes Wohnen vom Feinsten – besuchen Sie unseren Tag der offenen Tür und besichtigen Sie dieses moderne, nach Maß gebaute Anwesen im Grünen.
-            </p>
+            <p>Wir verkaufen insgesamt acht Eigentumswohnungen (3 1/2- und 4 1/2-Zimmer) im Erd-, Ober- und Attikageschoss. Erleben Sie schönes Wohnen vom Feinsten – besuchen Sie unseren Tag der offenen Tür und besichtigen Sie dieses moderne, nach Maß gebaute Anwesen im Grünen.</p>
         </div>
     </div>
 
@@ -391,7 +411,7 @@
         
         <div class="contact-details">
             +41 78 246 51 51
-            / bolligerimmobilien.ch I <a href="mailto:info@bolliger-immobilien.ch">info@bolliger-immobilien.ch</a>
+            I bolligerimmobilien.ch I <a href="mailto:info@bolliger-immobilien.ch">info@bolliger-immobilien.ch</a>
         </div>
     </div>
 </body>
