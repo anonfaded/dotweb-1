@@ -29,18 +29,17 @@
 
         .company-name {
             position: absolute;
-            width: 259px;
-            height: 39px;
-            top: 75px;
-            left: 75.23px;
-            font-size: 30px;
-            font-weight: 400;
-            line-height: 36.31px;
-            letter-spacing: -0.03em;
-            text-align: left;
-            color: #F9F9F9;
-            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            width: 194px;  /* Reduced from 289px */
+            height: 66px;  /* Reduced from 88px to maintain aspect ratio */
+            top: 55px;
+            left: 75px;
             z-index: 2;
+        }
+
+        .company-name img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .hero-container {
@@ -355,7 +354,9 @@
         <img src="src/hero.png" alt="Hero">
     </div>
 
-    <div class="company-name">Bolliger Immobilien</div>
+    <div class="company-name">
+        <img src="src/logo.svg" alt="Company Logo">
+    </div>
     
     <div class="hero-text">OPEN<br>HOUSE!</div>
     
