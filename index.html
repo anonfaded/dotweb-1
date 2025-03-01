@@ -29,19 +29,9 @@
             font-family: 'Inter', sans-serif;
         }
 
+        /* Remove or comment out old company-name styles */
         .company-name {
-            position: absolute;
-            width: 194px;  /* Reduced from 289px */
-            height: 66px;  /* Reduced from 88px to maintain aspect ratio */
-            top: 55px;
-            left: 75px;
-            z-index: 2;
-        }
-
-        .company-name img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            display: none;
         }
 
         .hero-container {
@@ -285,51 +275,9 @@
             z-index: 2;
         }
 
-        .contact-title {
-            position: absolute;
-            width: 445px;
-            height: 36px;
-            top: 59px;
-            left: 70px;
-            font-size: 28px;
-            font-weight: 600;
-            line-height: 32.42px;
-            letter-spacing: 0.01em;
-        }
-
-        .contact-address {
-            position: absolute;
-            width: 689px;
-            height: 32px;
-            top: 102px;
-            left: 71px;
-            font-size: 24px;
-            font-weight: 300;
-            line-height: 30.67px;
-            letter-spacing: 0.02em;
-        }
-
-        .contact-details {
-            position: absolute;
-            top: 138px;
-            left: 65px;
-            font-size: 24px;
-            line-height: 30.67px;
-            letter-spacing: 0.02em;
-            font-weight: 300;
-        }
-
-        .contact-details a {
-            color: white;
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 30.67px;
-            letter-spacing: 0.02em;
-            text-align: left;
-            text-decoration-line: underline;
-            text-decoration-style: solid;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: auto;
+        /* Remove all other contact-related styles */
+        .contact-title, .contact-address, .contact-details {
+            display: none;
         }
 
         ul {
@@ -349,6 +297,22 @@
             position: absolute;
             left: 0;
         }
+
+        /* Add new footer logo styles */
+        .footer-logo {
+            position: absolute;
+            width: 174px;
+            height: 46px;
+            top: 134.27px;
+            left: 881px;
+            z-index: 3;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
@@ -356,10 +320,6 @@
         <img src="src/hero.png" alt="Hero">
     </div>
 
-    <div class="company-name">
-        <img src="src/logo.svg" alt="Company Logo">
-    </div>
-    
     <div class="hero-text">OPEN<br>HOUSE!</div>
     
     <div class="date-location">
@@ -412,15 +372,8 @@
     </div>
 
     <div class="contact-section">
-        <div class="contact-title">Kontaktieren sie uns:</div>
-        
-        <div class="contact-address">
-            Bolliger Immobilien, Schwirtenstrasse 31, 4414 Füllinsdorf
-        </div>
-        
-        <div class="contact-details">
-            +41 78 246 51 51
-            I bolligerimmobilien.ch I <a href="mailto:info@bolliger-immobilien.ch">info@bolliger-immobilien.ch</a>
+        <div class="footer-logo">
+            <img src="src/logo.svg" alt="Company Logo">
         </div>
     </div>
 </body>
