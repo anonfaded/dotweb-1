@@ -313,6 +313,60 @@
             height: 100%;
             object-fit: contain;
         }
+
+        .footer-col-1, .footer-col-2, .footer-col-3 {
+            position: absolute;
+            width: 330px;
+            top: 71px;
+        }
+
+        .footer-col-1 {
+            left: 65px; /* Aligned with description */
+        }
+
+        .footer-col-2 {
+            left: 395px; /* 65px + 330px from first column */
+        }
+
+        .footer-col-3 {
+            left: 725px; /* 395px + 330px from second column */
+        }
+
+        .footer-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            white-space: nowrap;
+        }
+
+        .footer-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            filter: brightness(0) invert(1) opacity(0.3);
+        }
+
+        .footer-text {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 30.8px;
+            letter-spacing: 0;
+            white-space: nowrap;
+        }
+
+        .footer-text.underlined {
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: auto;
+        }
+
+        .footer-text a {
+            color: white;
+            text-decoration: inherit;
+        }
     </style>
 </head>
 <body>
@@ -375,6 +429,44 @@
         <div class="footer-logo">
             <img src="src/logo.svg" alt="Company Logo">
         </div>
+
+        <div class="footer-col-1">
+            <div class="footer-row">
+                <img src="src/icon1.svg" alt="Icon 1" class="footer-icon">
+                <span class="footer-text">Manuel Auer </span>
+            </div>
+            <div class="footer-row">
+                <img src="src/icon2.svg" alt="Icon 2" class="footer-icon">
+                <span class="footer-text underlined">
+                    <a href="info@bolligerimmobilien.ch">info@bolligerimmobilien.ch</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="footer-col-2">
+            <div class="footer-row">
+                <img src="src/icon3.svg" alt="Icon 3" class="footer-icon">
+                <span class="footer-text">Bolliger Immobilien </span>
+            </div>
+            <div class="footer-row">
+                <img src="src/icon4.svg" alt="Icon 4" class="footer-icon">
+                <span class="footer-text">Dörflistrasse 10, 8057 Zürich</span>
+            </div>
+        </div>
+
+        <div class="footer-col-3">
+            <div class="footer-row">
+                <img src="src/icon5.svg" alt="Icon 5" class="footer-icon">
+                <span class="footer-text">+41 78 246 51 51</span>
+            </div>
+            <div class="footer-row">
+                <img src="src/icon6.svg" alt="Icon 6" class="footer-icon">
+                <span class="footer-text">www.bolligerimmobilien.ch</span>
+            </div>
+        </div>
+
+        <div class=""></div>
+
     </div>
 </body>
 </html>
