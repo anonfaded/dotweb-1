@@ -322,24 +322,34 @@
 
         /* Add new footer price tag */
         .price-listing {
-            font-family: 'Roboto', sans-serif;  /* Added quotes and fallback */
+            font-family: 'Roboto', sans-serif;
             font-weight: 300;
             font-size: 23px;
-            line-height: 32.81px;
-            letter-spacing: 0%;
+            line-height: 28px;  /* Adjusted for better vertical alignment */
             color: #FFFFFF;
             z-index: 3;
             position: absolute;
-            top: 130px;
+            top: 160px;
             left: 701px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
+
+        .price-listing p {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         .price-listing .bold-price {
-            font-family: 'Roboto', sans-serif;  /* Added font-family here too */
+            font-family: 'Roboto', sans-serif;
             font-weight: 400;
             font-size: 28px;
-            line-height: 32.81px;
-            letter-spacing: 0%;
-            text-align: right;
+            line-height: 33px;  /* Adjusted to match content height */
+            display: inline-block;
+            white-space: nowrap;
         }
 
         /* Add new footer styles */
