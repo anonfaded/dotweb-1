@@ -442,11 +442,26 @@
 
         .hero-logo {
             position: absolute;
-            width: 245px;
-            height: 91px;
-            top: 37px;
-            left: 879px;
+            width: 215px;
+            height: 61px;
+            top: 39px;
+            left: 889px;
             z-index: 3;
+        }
+
+        .hero-logo::before {
+            content: '';
+            position: absolute;
+            width: 241px; /* Slightly wider than logo */
+            height: 71px; /* Slightly taller than logo */
+            top: -7px;
+            left: -10px;
+            background: white;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            z-index: -1;
         }
 
         .hero-logo img {
@@ -462,7 +477,7 @@
     </div>
 
     <div class="hero-logo">
-        <img src="src/logo.png" alt="Logo">
+        <img src="src/logo.svg" alt="Logo">
     </div>
 
     <div class="hero-text">OPEN<br>HOUSE!</div>
